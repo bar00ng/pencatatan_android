@@ -14,5 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="colorError">#FF4081</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
+
+        <item name="fontFamily">@font/poppins</item>
     </style>
 </resources>
