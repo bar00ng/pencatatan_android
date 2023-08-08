@@ -17,4 +17,13 @@
 
         <item name="fontFamily">@font/poppins</item>
     </style>
+
+    <style name="Theme.UAS_AKB_IF2_10120049.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.UAS_AKB_IF2_10120049.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.UAS_AKB_IF2_10120049.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

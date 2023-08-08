@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Belum terdaftar? Daftar Sekarang"
+        android:text="Register"
         android:textSize="14sp"
         android:textAlignment="center"
         android:id="@+id/register_link"
