@@ -8,6 +8,12 @@
     <string name="title_fragment_notes">Notes Fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_fragment_profile">Profile Fragment</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_fragment_about">About Fragment</string>
+
+    <string name="heading_one">Tools</string>
+    <string name="heading_two">Tujuan Aplikasi</string>
+    
+    <string name="desc_one">Aplikasi ini dibuat dengan menggunakan Firebase dan Java Android Studio.</string>
+    <string name="desc_two">Diharapkan aplikasi ini bisa memudahkan user untuk me-manage catatan mereka.</string>
 </resources>
