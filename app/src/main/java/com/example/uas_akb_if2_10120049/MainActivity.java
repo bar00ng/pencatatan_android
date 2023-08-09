@@ -1,3 +1,7 @@
+// NIM      : 10120049
+// Nama     : Mochammad Gymnastiar
+// Kelas    : IF-2
+
 package com.example.uas_akb_if2_10120049;
 
 import androidx.annotation.NonNull;
@@ -10,7 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +53,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+        View headerView = navigationView.getHeaderView(0);
+        TextView navEmail = headerView.findViewById(R.id.userEmail);
+
+        if (user != null) {
+            String userEmail = user.getEmail();
+            navEmail.setText(userEmail);
+        }
     }
 
     @Override
@@ -67,9 +78,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (itemId == R.id.nav_logout) {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+
             startActivity(intent);
             finish();
-            Toast.makeText(this, "Berhasil Logout", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Berhasil Logout", Toast.LENGTH_SHORT).show();
         }
         drawer.closeDrawer(GravityCompat.START);
         setTitle(currentTitle);

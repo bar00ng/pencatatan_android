@@ -1,3 +1,7 @@
+// NIM      : 10120049
+// Nama     : Mochammad Gymnastiar
+// Kelas    : IF-2
+
 package com.example.uas_akb_if2_10120049;
 
 import android.os.Bundle;

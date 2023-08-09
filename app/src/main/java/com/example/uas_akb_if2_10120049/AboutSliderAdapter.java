@@ -1,10 +1,13 @@
+// NIM      : 10120049
+// Nama     : Mochammad Gymnastiar
+// Kelas    : IF-2
+
 package com.example.uas_akb_if2_10120049;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,11 +17,13 @@ public class AboutSliderAdapter extends RecyclerView.Adapter<AboutSliderAdapter.
     Context context;
     int header[] = {
             R.string.heading_one,
-            R.string.heading_two
+            R.string.heading_two,
+            R.string.heading_three,
     };
     int desc[] = {
             R.string.desc_one,
-            R.string.desc_two
+            R.string.desc_two,
+            R.string.desc_three,
     };
     // Constructor of our ViewPager2Adapter class
     AboutSliderAdapter(Context ctx) {

@@ -1,3 +1,7 @@
+// NIM      : 10120049
+// Nama     : Mochammad Gymnastiar
+// Kelas    : IF-2
+
 package com.example.uas_akb_if2_10120049;
 
 import androidx.annotation.NonNull;
@@ -15,7 +19,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,7 +28,6 @@ public class RegisterActivity extends AppCompatActivity {
     TextView textView;
     EditText emailInput, passwordInput;
     Button submitButton;
-
     FirebaseAuth mAuth;
     ProgressBar progressBar;
 
