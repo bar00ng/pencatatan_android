@@ -14,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -25,11 +27,23 @@ public class LoginActivity extends AppCompatActivity {
 
     TextView textView;
     EditText emailInput, passwordInput;
-    Button submitButton;
-
+    Button submitButton, googleButton;
+    GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     ProgressBar progressBar;
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         emailInput = findViewById(R.id.login_email);
         passwordInput = findViewById(R.id.login_password);
         submitButton = findViewById(R.id.login_button);
+        googleButton = findViewById(R.id.google_login);
         textView = findViewById(R.id.register_link);
 
         textView.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +104,6 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }

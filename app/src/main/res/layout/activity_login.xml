@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:id="@+id/login_label"
-                android:textSize="36dp"
+                android:textSize="24dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="?attr/colorOnPrimary" />
@@ -39,7 +39,9 @@
                 android:background="@drawable/custom_edit_text"
                 android:drawableLeft="@drawable/auth_email"
                 android:drawablePadding="10dp"
+                android:textSize="12sp"
                 android:hint="Email"
+                android:inputType="text"
                 android:padding="8dp"
                 android:textColor="?attr/colorOnPrimary"
                 android:layout_marginTop="40dp" />
@@ -47,6 +49,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:textSize="12sp"
                 android:id="@+id/login_password"
                 android:background="@drawable/custom_edit_text"
                 android:drawableLeft="@drawable/auth_password"
@@ -59,10 +62,10 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/login_button"
                 android:text="LOG IN"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="?attr/colorOnPrimary"
                 android:textColor="?attr/colorPrimary"
@@ -80,4 +83,15 @@
         android:id="@+id/register_link"
         android:textColor="?attr/colorOnPrimary"
         android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/google_login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Login dengan google"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:textColor="?attr/colorPrimary"
+        app:cornerRadius = "20dp"
+        android:textSize="12sp" />
+
 </LinearLayout>

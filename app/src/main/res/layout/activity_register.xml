@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:id="@+id/register_label"
-                android:textSize="36dp"
+                android:textSize="24dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textColor="?attr/colorOnPrimary" />
@@ -39,6 +39,8 @@
                 android:background="@drawable/custom_edit_text"
                 android:drawableLeft="@drawable/auth_email"
                 android:drawablePadding="10dp"
+                android:inputType="text"
+                android:textSize="12sp"
                 android:hint="Email"
                 android:padding="8dp"
                 android:textColor="?attr/colorOnPrimary"
@@ -49,6 +51,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/register_password"
                 android:background="@drawable/custom_edit_text"
+                android:textSize="12sp"
                 android:drawableLeft="@drawable/auth_password"
                 android:drawablePadding="10dp"
                 android:inputType="textPassword"
@@ -59,10 +62,10 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/register_button"
                 android:text="REGISTER"
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="?attr/colorOnPrimary"
                 android:textColor="?attr/colorPrimary"
