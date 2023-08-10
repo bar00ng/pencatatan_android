@@ -56,7 +56,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/form_desc_kategori"
+        android:id="@+id/form_add_desc"
         android:background="@drawable/custom_edit_text"
         android:textSize="12sp"
         android:hint="Detail Catatan"
@@ -68,30 +68,15 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp" />
 
-    <LinearLayout
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/submit_button"
-            android:text="SUBMIT"
-            android:textSize="12sp"
-            android:backgroundTint="?attr/colorOnPrimary"
-            android:textColor="?attr/colorPrimary"
-            app:cornerRadius = "20dp" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/cancel_button"
-            android:text="CANCEL"
-            android:textSize="12sp"
-            android:backgroundTint="?attr/colorOnSecondary"
-            android:textColor="?attr/colorSecondary"
-            app:cornerRadius = "20dp" />
-    </LinearLayout>
+        android:id="@+id/submit_button"
+        android:text="SUBMIT"
+        android:onClick="saveNote"
+        android:textSize="12sp"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:textColor="?attr/colorPrimary"
+        app:cornerRadius = "20dp" />
 
 </LinearLayout>
