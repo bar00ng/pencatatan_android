@@ -4,6 +4,7 @@
 
 package com.example.uas_akb_if2_10120049;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,12 +13,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link NotesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class NotesFragment extends Fragment {
+
+   FloatingActionButton addNewNoteButton;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,6 +68,22 @@ public class NotesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notes, container, false);
+        View view = inflater.inflate(R.layout.fragment_notes, container, false);
+        addNewNoteButton = view.findViewById(R.id.add_new_note_button);
+
+        addNewNoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddNoteActivity.class);
+                startActivity(intent);
+
+                // Get a reference to the hosting Activity and call finish()
+                if (getActivity() != null) {
+                    getActivity().finish();
+                }
+            }
+        });
+
+        return view;
     }
 }
