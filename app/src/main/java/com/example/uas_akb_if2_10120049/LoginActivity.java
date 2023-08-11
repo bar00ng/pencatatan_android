@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
         emailInput = findViewById(R.id.login_email);
         passwordInput = findViewById(R.id.login_password);
         submitButton = findViewById(R.id.login_button);
-        googleButton = findViewById(R.id.google_login);
         textView = findViewById(R.id.register_link);
 
         textView.setOnClickListener(new View.OnClickListener() {
