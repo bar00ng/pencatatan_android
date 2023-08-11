@@ -6,6 +6,7 @@
     <string name="title_profile_fragment">Profile</string>
     <string name="title_notes_fragment">My Notes</string>
     <string name="title_add_note_activity">Add New Note</string>
+    <string name="title_edit_note_activity">Edit Note</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -26,4 +27,10 @@
     <string name="form_title_label">Title</string>
     <string name="form_category_label">Kategori</string>
     <string name="form_desc_label">Detail Catatan</string>
+
+    <string-array name="categories">
+        <item>Tugas Kuliah</item>
+        <item>Pertemuan</item>
+        <item>Pekerjaan Rumah</item>
+    </string-array>
 </resources>

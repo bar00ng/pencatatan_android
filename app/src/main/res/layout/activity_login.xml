@@ -84,14 +84,4 @@
         android:textColor="?attr/colorOnPrimary"
         android:layout_marginBottom="20dp" />
 
-    <Button
-        android:id="@+id/google_login"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Login dengan google"
-        android:backgroundTint="?attr/colorOnPrimary"
-        android:textColor="?attr/colorPrimary"
-        app:cornerRadius = "20dp"
-        android:textSize="12sp" />
-
 </LinearLayout>

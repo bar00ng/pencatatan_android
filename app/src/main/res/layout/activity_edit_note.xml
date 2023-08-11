@@ -16,7 +16,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/form_add_title"
+        android:id="@+id/form_edit_title"
         android:background="@drawable/custom_edit_text"
         android:textSize="12sp"
         android:hint="Judul Catatan"
@@ -52,7 +52,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/form_add_desc"
+        android:id="@+id/form_edit_desc"
         android:background="@drawable/custom_edit_text"
         android:textSize="12sp"
         android:hint="Detail Catatan"
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/submit_button"
-        android:text="SUBMIT"
+        android:text="UPDATE NOTE"
         android:onClick="saveNote"
         android:textSize="12sp"
         android:backgroundTint="?attr/colorOnPrimary"

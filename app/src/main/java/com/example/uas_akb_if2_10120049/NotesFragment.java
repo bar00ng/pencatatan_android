@@ -16,10 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -113,6 +115,15 @@ public class NotesFragment extends Fragment {
                 adapter.deleteItem(viewHolder.getAdapterPosition());
             }
         }).attachToRecyclerView(recyclerView);
+
+        adapter.setOnItemClickListener(new NotesAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+                Intent intent = new Intent(getContext(), EditNoteActivity.class);
+                intent.putExtra("documentId", documentSnapshot.getId());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

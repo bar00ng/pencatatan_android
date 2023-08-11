@@ -3,6 +3,7 @@ package com.example.uas_akb_if2_10120049;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,16 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import org.w3c.dom.Document;
 
 import java.util.List;
 
 public class NotesAdapter extends FirestoreRecyclerAdapter<Note, NotesAdapter.NoteHolder> {
-    /**
-     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
-     * FirestoreRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
+    private onItemClickListener listener;
     public NotesAdapter(@NonNull FirestoreRecyclerOptions<Note> options) {
         super(options);
     }
@@ -50,6 +49,25 @@ public class NotesAdapter extends FirestoreRecyclerAdapter<Note, NotesAdapter.No
             noteTitle = itemView.findViewById(R.id.note_title);
             noteCategory = itemView.findViewById(R.id.note_category);
             noteDescription = itemView.findViewById(R.id.note_desc);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    if (position != RecyclerView.NO_POSITION && listener != null) {
+                        listener.onItemClick(getSnapshots().getSnapshot(position), position);
+                    }
+                }
+            });
         }
+    }
+
+    public interface onItemClickListener {
+        void onItemClick(DocumentSnapshot documentSnapshot, int position);
+    }
+
+    public void setOnItemClickListener(onItemClickListener listener) {
+        this.listener = listener;
     }
 }
