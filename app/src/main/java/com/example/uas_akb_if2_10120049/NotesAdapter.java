@@ -31,12 +31,13 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         DocumentSnapshot data = documents.get(position);
-        String title = 
+        String title = data.getString("title");
+        holder.bindTitle(title);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return documents.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -44,6 +45,10 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             noteTitle = itemView.findViewById(R.id.note_title);
+        }
+
+        void bindTitle(String title) {
+            noteTitle.setText(title);
         }
     }
 }
